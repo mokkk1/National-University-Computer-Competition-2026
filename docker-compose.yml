@@ -1,0 +1,23 @@
+# docker-compose.yml — 本地验证
+# 运行: docker compose up
+
+version: "3.8"
+
+services:
+  bdc2026:
+    image: bdc2026:latest
+    container_name: bdc2026
+    working_dir: /app
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    volumes:
+      - ./app/data:/app/data:ro
+      - ./app/output:/app/output
+      - ./app/temp:/app/temp
+    command: >
+      bash -c "
+        /bin/bash /app/init.sh &&
+        /bin/bash /app/train.sh &&
+        /bin/bash /app/test.sh
+      "

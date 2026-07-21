@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Testing
+.pytest_cache/
+.tox/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Model artifacts (large, generated)
+model/
+*.pth
+*.pkl
+
+# Data files (large, generated)
+stock_data.csv
+train.csv
+test.csv
+data/*.csv
+!data/.gitkeep
+
+# Macro/industry data
+*.csv
+!hs300_stock_list.csv
+
+# Logs
+*.log
+logs/
+log/
+
+# Pipeline output
+pipeline_*.txt
+output/
+
+# Backups
+backup_*/
+
+# Documents (generated/reports)
+*.docx
+*.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# UV
+uv.lock
